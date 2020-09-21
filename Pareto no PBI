@@ -1,0 +1,7 @@
+Soma Valor  = SUM([Valor])
+
+Rank = RANKX(ALL([Atributo]),[Soma Valor],,DESC)
+
+acumulado = CALCULATE([Soma Valor ],TOPN([Rank],ALL([Atributo]),[Soma Valor],DESC))
+
+% acumulado = [acumulado] / CALCULATE([Soma Valor],ALL([Atributo]))
